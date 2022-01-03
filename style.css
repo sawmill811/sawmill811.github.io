@@ -1,16 +1,25 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url("waveBG.png");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .navbar {
-    position: absolute;
-    top: 0;
+    position: sticky;
+    top: 10px;
     left: 0;right:0 ;
     bottom: 0;
     width: 100%;
     height: 60px;
-    animation: navbar-startup1 2.5s ease 1, navbar-startup2 1.3s ease 1;
+    animation: startup1 2.5s ease 1;
+    -webkit-animation: startup1 2.5s ease 1;
+    -moz-animation: startup1 2.5s ease 1;
+    -o-animation: startup1 2.5s ease 1;
+    z-index: 2;
 }
 
 .navbar ul {
@@ -24,6 +33,7 @@ body {
 .navbar ul li {
     position: relative;
     list-style: none;
+    margin: 2px;
 }
 
 .navbar ul li a{
@@ -33,12 +43,15 @@ body {
     display: flex;
     /* border: 0.1em solid black; */
     justify-content: center;
-    /* border-radius: 0.3em; */
+    border-radius: 10px;
     align-items: center;
     padding: 0 0.5em;
     flex-direction: column;
     text-decoration: none;
     transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     
 }
 
@@ -67,12 +80,221 @@ body {
 
 }
 
-@keyframes navbar-startup1 {
+.navbar ul li[class=item1] {
+    animation: navbar-startup1 1.3s ease 1;
+}
+
+.navbar ul li[class=item2] {
+    animation: navbar-startup2 1.3s ease 1;
+}
+
+/* .navbar ul li[class=item3] {
+    animation: navbar-startup3 1.3s ease 1;
+} */
+
+.navbar ul li[class=item4] {
+    animation: navbar-startup4 1.3s ease 1;
+}
+
+.navbar ul li[class=item5] {
+    animation: navbar-startup5 1.3s ease 1;
+}
+
+.home {
+    position: relative;
+    display: flex;
+    top: 10px;
+    height: 480px;
+    margin: 0 20px;
+    border: 4px solid red;
+}
+
+.intro-box {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: rgb(255,245,237);
+    top: 120px;
+    left: 100px;
+    border-radius: 20px;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* align-items: center; */
+    cursor: pointer;
+    user-select: none;
+    animation: startup1 2.5s ease 1;
+    -webkit-animation: startup1 2.5s ease 1;
+    -moz-animation: startup1 2.5s ease 1;
+    -o-animation: startup1 2.5s ease 1;
+}
+
+.intro-box:hover #hello {
+    top: 37px;
+}
+
+.intro-box:hover #myname {
+    top: 22px;
+}
+
+.intro-box2 {
+    position: relative;
+    width:300px;
+    height: 160px;
+    background-color: rgb(233,225,221);
+    top: 120px;
+    left: -200px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    z-index: -1;
+    animation: startup1 2.5s ease 1;
+    -webkit-animation: startup1 2.5s ease 1;
+    -moz-animation: startup1 2.5s ease 1;
+    -o-animation: startup1 2.5s ease 1;
+}
+
+.intro-box::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: rgb(233,225,221);
+    /* top: 140px; */
+    top: 140px;
+    left: 50px;
+    transform: perspective(3em) rotateX(20deg) scale(1, 0.15);
+    width: 200px;
+    height: 100px;
+    opacity: 0; 
+    filter: blur(2em);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.intro-box:hover::before{
+    filter: blur(5em);
+    opacity: 0.7;
+}
+
+#hello {
+    position: relative;
+    top: 30px;
+    left: 20px;
+    font-size: 1.3em;
+    font-family: 'Ubuntu', sans-serif;
+    transition: top 0.5s ease 0.5s;
+    -webkit-transition: top 0.5s ease 0.5s;
+    -moz-transition: top 0.5s ease 0.5s;
+    -o-transition: top 0.5s ease 0.5s;
+    /* animation: intro-box-movement2 1s ease 1; */
+}
+
+#myname {
+    position: relative;
+    top: 30px;
+    left: 13px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.4em;
+    transition: top 0.5s ease 0.1s;
+    -webkit-transition: top 0.5s ease 0.1s;
+    -moz-transition: top 0.5s ease 0.1s;
+    -o-transition: top 0.5s ease 0.1s;
+    /* animation: intro-box-movement1 1s ease 1; */
+}
+
+.about-me {
+    position: relative;
+    display: flex;
+    top: 70px;
+    height: 480px;
+    margin: 20px 20px;
+    border: 4px solid red;
+    
+}
+
+.skills-interests {
+    position: relative;
+    display: flex;
+    top: 70px;
+    height: 480px;
+    margin: 20px 20px;
+    border: 4px solid red;
+}
+
+.projects {
+    position: relative;
+    display: flex;
+    top: 70px;
+    height: 480px;
+    margin: 20px 20px;
+    border: 4px solid red;
+}
+
+.contact-me {
+    position: relative;
+    display: flex;
+    top: 70px;
+    bottom: 50px;
+    height: 480px;
+    margin: 20px 20px;
+    border: 4px solid red;
+}
+
+.footer {
+    position: relative;
+    /* border: 4px solid red; */
+    top: 70px;
+    height: 30px;
+    margin: 20px 20px;
+}
+
+
+@keyframes startup1 {
     0% {opacity:0;}
     100% {opacity:1;}
 }
 
+@keyframes navbar-startup1 {
+    0% {left:200px;}
+    100% {left:0px;}
+}
+
 @keyframes navbar-startup2 {
-    0% {top:-60px;}
-    100% {top:0px;}
+    0% {left:120px;}
+    100% {left:0px;}
+}
+
+/* @keyframes navbar-startup3 {
+    0% {left:200px;}
+    100% {left:0px;}
+} */
+
+@keyframes navbar-startup4 {
+    0% {left:-120px;}
+    100% {left:0px;}
+}
+
+@keyframes navbar-startup5 {
+    0% {left:-200px;}
+    100% {left:0px;}
+}
+
+@keyframes intro-box-shadow {
+    0% {filter: blur(2em);}
+    100% {filter: blur(5em);}
+}
+
+@keyframes intro-box-movement1 {
+    0% {top: 10px; pointer-events: none;}
+    100% {top: 30px;pointer-events: none;}
+}
+
+
+@keyframes intro-box-movement2 {
+    0% {top: 45px;pointer-events: none;}
+    100% {top: 30px;pointer-events: none;}
 }
