@@ -1,0 +1,78 @@
+body {
+    background-image: url("waveBG.png");
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;right:0 ;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    animation: navbar-startup1 2.5s ease 1, navbar-startup2 1.3s ease 1;
+}
+
+.navbar ul {
+    top: -3px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    position: relative;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: rgb(255,245,237);
+    /* color: rgb(247,247,245); */
+    position: relative;
+    display: flex;
+    /* border: 0.1em solid black; */
+    justify-content: center;
+    /* border-radius: 0.3em; */
+    align-items: center;
+    padding: 0 0.5em;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    
+}
+
+.navbar ul li a .icon {
+    justify-content: center;
+    padding-top: 0.5em;
+}
+
+.navbar ul li a .text{
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+    margin: 0.2em;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.navbar ul li a:hover {
+    color: rgb(27,27,27);
+    background: rgb(255,245,237);
+
+}
+
+.navbar ul li a:focus {
+    color: rgb(27,27,27);
+    background: rgb(255,245,237);
+
+}
+
+@keyframes navbar-startup1 {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes navbar-startup2 {
+    0% {top:-60px;}
+    100% {top:0px;}
+}
