@@ -6,28 +6,56 @@ body {
     background-image: url("waveBG.png");
     background-size: cover;
     background-attachment: fixed;
+    top:0;
+    position: relative;
+}
+
+/* body::-webkit-scrollbar {
+    width:0;
+    height:0;
+} */
+
+a {
+    /* text-decoration: none; */
+    color: inherit;
 }
 
 .navbar {
-    position: sticky;
-    top: 10px;
-    left: 0;right:0 ;
+    /* position: absolute; */
+    position: fixed;
+    /* background-color: rgb(255,255,255); */
+    top: 0px;
+    left: 0;
+    right:0;
     bottom: 0;
     width: 100%;
     height: 60px;
-    animation: startup1 2.5s ease 1;
-    -webkit-animation: startup1 2.5s ease 1;
-    -moz-animation: startup1 2.5s ease 1;
-    -o-animation: startup1 2.5s ease 1;
-    z-index: 2;
+    /* animation: opacityUP 2.5s ease 1;
+    -webkit-animation: opacityUP 2.5s ease 1;
+    -moz-animation: opacityUP 2.5s ease 1;
+    -o-animation: opacityUP 2.5s ease 1; */
+    z-index: 99;
+    background-image: url("waveBG2.png");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    /* background-attachment: fixed; */
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 1); */
 }
 
 .navbar ul {
-    top: -3px;
+    
     display: flex;
     flex-direction: row;
     justify-content:center;
+    align-items: center;
+    /* position: absolute; */
     position: relative;
+    top: 5px;
+    margin: 0;
+    padding: 0;
+    /* border: 4px solid green; */
+    /* opacity: 0; */
 }
 
 .navbar ul li {
@@ -58,20 +86,35 @@ body {
 .navbar ul li a .icon {
     justify-content: center;
     padding-top: 0.5em;
+    position: relative;
+    top: 3px;
+    transform: scale(1.5);
+    transition: transform 0.2s ease;
+    
+    /* text-shadow: 2px 2px black; */
 }
 
-.navbar ul li a .text{
+
+
+.navbar ul li a .navbar-headings{
     font-family: 'Varela Round', sans-serif;
+    color: rgb(27,27,27);
     position: relative;
     margin: 0.2em;
     font-size: 0.9em;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .navbar ul li a:hover {
     color: rgb(27,27,27);
     background: rgb(255,245,237);
+    /* animation: icon-shrink 0.2s ease; */
+}
 
+.navbar ul li a:hover .icon {
+    transform: scale(1);
 }
 
 .navbar ul li a:focus {
@@ -92,21 +135,38 @@ body {
     animation: navbar-startup3 1.3s ease 1;
 } */
 
-.navbar ul li[class=item4] {
+.navbar ul li[class=item3] {
     animation: navbar-startup4 1.3s ease 1;
 }
 
-.navbar ul li[class=item5] {
+.navbar ul li[class=item4] {
     animation: navbar-startup5 1.3s ease 1;
 }
+
+.navbar ul li[class*=item]:hover .navbar-headings {
+    opacity: 1;
+}
+
+/* .page-content {
+    position:absolute;
+    border: 4px solid green;
+    overflow-y: scroll;   
+} */
 
 .home {
     position: relative;
     display: flex;
-    top: 10px;
+    /* flex-direction: column; */
+    top: 70px;
+    /* bottom: 0; */
     height: 480px;
     margin: 0 20px;
-    border: 4px solid red;
+    border : 4px solid #A13333; border-radius: 10px;
+    animation: opacityUP 2s ease 1;
+    -webkit-animation: opacityUP 2s ease 1;
+    -moz-animation: opacityUP 2s ease 1;
+    -o-animation: opacityUP 2s ease 1;
+    
 }
 
 .intro-box {
@@ -122,10 +182,7 @@ body {
     /* align-items: center; */
     cursor: pointer;
     user-select: none;
-    animation: startup1 2.5s ease 1;
-    -webkit-animation: startup1 2.5s ease 1;
-    -moz-animation: startup1 2.5s ease 1;
-    -o-animation: startup1 2.5s ease 1;
+    
 }
 
 .intro-box:hover #hello {
@@ -150,10 +207,7 @@ body {
     cursor: pointer;
     user-select: none;
     z-index: -1;
-    animation: startup1 2.5s ease 1;
-    -webkit-animation: startup1 2.5s ease 1;
-    -moz-animation: startup1 2.5s ease 1;
-    -o-animation: startup1 2.5s ease 1;
+    
 }
 
 .intro-box::before {
@@ -198,6 +252,7 @@ body {
     top: 30px;
     left: 13px;
     font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     font-size: 3.4em;
     transition: top 0.5s ease 0.1s;
     -webkit-transition: top 0.5s ease 0.1s;
@@ -206,65 +261,144 @@ body {
     /* animation: intro-box-movement1 1s ease 1; */
 }
 
+.pfp {
+    width: 300px;
+    height: 300px;
+    top: 30px;
+    left: 150px;
+    position: relative;
+
+}
+
+.pfp:hover {
+    animation: pfp-rotate 4s ease infinite 0.5s;
+}
+
 .about-me {
     position: relative;
-    display: flex;
+    /* display: flex; */
     top: 70px;
     height: 480px;
     margin: 20px 20px;
-    border: 4px solid red;
-    
+    border : 4px solid #A13333; border-radius: 10px;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: rgb(233,225,221);
+    font-size: 1.3em;
+    animation: opacityUP 2s ease 1;
+    -webkit-animation: opacityUP 2s ease 1;
+    -moz-animation: opacityUP 2s ease 1;
+    -o-animation: opacityUP 2s ease 1;
+}
+
+.heading {
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    color: #CD1818;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
 }
 
 .skills-interests {
     position: relative;
-    display: flex;
+    /* display: flex; */
     top: 70px;
     height: 480px;
     margin: 20px 20px;
-    border: 4px solid red;
+    border : 4px solid #A13333; border-radius: 10px;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: rgb(233,225,221);
+    font-size: 1.3em;
+    animation: opacityUP 2s ease 1;
+    -webkit-animation: opacityUP 2s ease 1;
+    -moz-animation: opacityUP 2s ease 1;
+    -o-animation: opacityUP 2s ease 1;
 }
 
 .projects {
     position: relative;
-    display: flex;
+    /* display: flex; */
     top: 70px;
     height: 480px;
     margin: 20px 20px;
-    border: 4px solid red;
+    border : 4px solid #A13333; border-radius: 10px;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: rgb(233,225,221);
+    font-size: 1.3em;
+    animation: opacityUP 2s ease 1;
+    -webkit-animation: opacityUP 2s ease 1;
+    -moz-animation: opacityUP 2s ease 1;
+    -o-animation: opacityUP 2s ease 1;
 }
 
 .contact-me {
     position: relative;
-    display: flex;
+    /* display: flex; */
     top: 70px;
     bottom: 50px;
     height: 480px;
     margin: 20px 20px;
-    border: 4px solid red;
+    border : 4px solid #A13333; border-radius: 10px;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    color: rgb(233,225,221);
+    font-size: 1.3em;
+}
+
+.contact-links {
+    font-size:3em;
+    display: flex;
+    position: relative;
+    top: 350px;
+    left: -115px;
+    /* padding: 20px; */
+    color: #CD1818;
+    /* text-align: center;     */
+}
+
+#link1, #link2, #link3 {
+    margin: 5px;
+    transition: font-size 0.5s ease;
+}
+
+#link1:hover, #link2:hover, #link3:hover {
+    font-size: 1.1em;
+}
+
+#link {
+    margin: 10px;
 }
 
 .footer {
     position: relative;
-    /* border: 4px solid red; */
+    /* border : 4px solid #A13333; border-radius: 10px; */
     top: 70px;
     height: 30px;
     margin: 20px 20px;
 }
 
 
-@keyframes startup1 {
+@keyframes opacityUP {
     0% {opacity:0;}
     100% {opacity:1;}
 }
 
 @keyframes navbar-startup1 {
-    0% {left:200px;}
+    0% {left:150px;}
     100% {left:0px;}
 }
 
 @keyframes navbar-startup2 {
-    0% {left:120px;}
+    0% {left:60px;}
     100% {left:0px;}
 }
 
@@ -274,12 +408,12 @@ body {
 } */
 
 @keyframes navbar-startup4 {
-    0% {left:-120px;}
+    0% {left:-60px;}
     100% {left:0px;}
 }
 
 @keyframes navbar-startup5 {
-    0% {left:-200px;}
+    0% {left:-150px;}
     100% {left:0px;}
 }
 
@@ -297,4 +431,15 @@ body {
 @keyframes intro-box-movement2 {
     0% {top: 45px;pointer-events: none;}
     100% {top: 30px;pointer-events: none;}
+}
+
+@keyframes icon-shrink {
+    0% {transform: scale(1.5);}
+    100% {transform: scale(1);}
+}
+
+@keyframes pfp-rotate {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
 }

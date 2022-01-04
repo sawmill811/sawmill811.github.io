@@ -1,0 +1,2 @@
+when i will have learnt js, ill add a function to monitor rotation of pfp background so that when mouse hovers out of it it will be
+the image just doesnt go back to og state but instead stops there. this will make it look less jerky
