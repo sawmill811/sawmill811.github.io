@@ -36,7 +36,7 @@ a {
     right:0;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: min(4.2em, 7.5vw);
     /* animation: opacityUP 2.5s ease 1;
     -webkit-animation: opacityUP 2.5s ease 1;
     -moz-animation: opacityUP 2.5s ease 1;
@@ -88,7 +88,7 @@ a {
     display: flex;
     /* border: 0.1em solid black; */
     justify-content: center;
-    border-radius: 10px;
+    border-radius: 0.5em;
     align-items: center;
     padding: 0 0.5em;
     flex-direction: column;
@@ -107,7 +107,7 @@ a {
     /* top: 0.3em;
      */
     margin: 0.3em auto 0 auto;
-    font-size: 1em;
+    font-size: min(1rem, 1.8vw);
     transform: scale(1.5);
     transition: transform 0.2s ease;
     
@@ -121,7 +121,7 @@ a {
     color: rgb(27,27,27);
     position: relative;
     margin: 0.2em;
-    font-size: 1em;
+    font-size: min(1em, 1.5vw);
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -196,12 +196,12 @@ a {
 .intro-box {
     position: relative;
     width: 46%;
-    max-width: 40vw;
+    /* max-width: 40vw; */
     /* display: inline-block; */
     padding: 0.1em;
     /* max-width: 285px; */
     height: 9em;
-    max-height: 200px;
+    /* max-height: 200px; */
     margin: 7em auto;
     /* margin-top:20%; */
     background-color: rgb(255,245,237);
@@ -222,7 +222,7 @@ a {
 }
 
 .intro-box:hover #myname {
-    bottom: 10%;
+    bottom: 7%;
 }
 
 /* rgb(233,225,221) */
@@ -230,7 +230,7 @@ a {
 .intro-box2 {
     position: absolute;
     width: 100%;
-    max-width: 40vw;
+    /* max-width: 40vw; */
     /* display: inline-block; */
     padding: 0.1em;
     /* max-width: 285px; */
@@ -336,7 +336,7 @@ a {
 }
 
 .pfp {
-    margin: 5% auto;
+    margin: auto;
     width: 70%;
     max-width: 500px;
     position: relative;
@@ -390,18 +390,18 @@ a {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    /* border: 3px solid green; */
+    border: 3px solid green;
     padding: 0.5em;
     width: 90%;
     margin: 0 auto;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .section1 {
     position: relative;
     width: 100%;
-    /* border: 4px solid lightblue; */
+    border: 4px solid lightblue;
     color: rgb(255,245,237);
     font-family: "Oswald", sans-serif;
     font-weight: 300;
@@ -414,9 +414,9 @@ a {
 .about-me-pic {
     position: absolute;
     margin: auto;
-    
+    margin-bottom: 4em;
     width: 90%;
-    max-width: 450px;
+    /* max-width: 30vw; */
     border-radius: 50%;
 }
 
@@ -426,7 +426,7 @@ a {
     width: 100%;
     height: 30rem;
     
-    /* border: 4px solid lightblue; */
+    border: 4px solid lightblue;
     justify-content: center;
     align-items: center;
 }
@@ -527,30 +527,41 @@ a {
 } */
 
 @media (orientation: landscape) {
+
+    .body {
+        font-size: min(1em, 10px);
+    }
+
     .home {
         flex-direction: row;
         align-items: stretch;
-        padding: 2em;
-        margin-top: 3.7em;
+        padding: min(2em, 1vw);
+        margin-top: min(4.6em, 7.5vw);
+        /* margin-top: min(5em, 8vw); */
+        margin-bottom: min(2em, 3vw);
+        border-width: min(0.3em, 0.45vw);
+        border-radius: min(1em, 1.5vw);
     }
 
     .content {
         flex-direction: row;
-        align-items: flex-center;
+        /* justify-content:flex-start; */
+        align-items: center;
         width: 100%;
         margin: 0 auto;
-        /* padding: 2em; */
+        padding: 0;
     }
 
     .section1 {
-        width:60%;
-        font-size: 1.7rem;
+        width:70%;
+        font-size: min(1.7rem, 3.4vw);
+        padding: min(0.5em, 0.75vw);
         /* border: 4px solid lightblue; */
     }
 
     .section2 {
-        width: 40%;
-        height: 20rem;
+        width: 30%;
+        height: min(25rem, 45vw);
     }
 
     .home .left-side, .right-side {
@@ -562,35 +573,46 @@ a {
     }
 
     #myname {
-        font-size: min(3.4em, 4.3vw);
+        font-size: min(3.8em, 3.9vw);
     }
 
     .intro-box {
         /* transform: scale(1); */
         width: 70%;
-        height: 7.5em;
+        max-width: 21.5vw;
+        height: min(8.5em, 10vw);
+        padding: min(0.1em, 0.1vw);
+        margin: min(7em, 9vw) auto;
     }
 
     .contact-links {
         transform: scale(0.8);
     }
 
-    .home, .about-me, .skills-interests, .projects {
+    .about-me, .skills-interests, .projects {
         width : 80%;
-        padding: 2em;
+        /* padding: 2em; */
+        padding: min(2em, 3vw);
+        border-width: min(0.3em, 0.45vw);
+        border-radius: min(1em, 1.5vw);
     }
 
     .contact-links {
-        margin: 0.3em auto;
+        margin: min(0.3em, 0.5vw) auto;
 
     }
 
     .about-me {
-        margin-top:6em;
+        margin-top: min(6.6em, 10.5vw);
     }
 
     .skills-interests {
-        margin-top: 4em;
+        margin-top: min(5em, 7.5vw);
+    }
+
+    .about-me-pic {
+        max-width: 30vw;
+        margin-bottom: min(4em, 6vw);
     }
 }
 
@@ -608,7 +630,8 @@ a {
 @media (orientation: landscape) {
     .heading {
         text-align: left;
-        font-size: 3rem;
+        font-size: min(3rem, 5vw);
+        /* font-size: 3rem; */
     }
 
     .skills-content {
@@ -619,7 +642,8 @@ a {
 
     .webdev, .webdev-extra, .programming {
         flex-direction: column;
-        padding: 1em;
+        padding: min(1em, 1.8vw);
+        border-radius: min(1.5em, 2.4vw);
     }
 
     .webdev .icon {
@@ -636,12 +660,12 @@ a {
 }
 
 .content-text {
-    font-size: 0.8em;
+    font-size: min(0.8em, 4vw);
 }
 
 
 #link1, #link2, #link3, #link4 {
-    margin: 5px;
+    margin: min(0.5em, 0.75vw);
     transition: transform 0.5s ease;
 }
 
@@ -669,13 +693,13 @@ a {
 }
 
 @keyframes navbar-startup1 {
-    0% {left:150px;opacity:0;}
-    100% {left:0px;opacity:1;}
+    0% {left:20%;opacity:0;}
+    100% {left:0;opacity:1;}
 }
 
 @keyframes navbar-startup2 {
-    0% {left:60px;opacity:0;}
-    100% {left:0px;opacity:1;}
+    0% {left:7%;opacity:0;}
+    100% {left:0;opacity:1;}
 }
 
 /* @keyframes navbar-startup3 {
@@ -684,13 +708,13 @@ a {
 } */
 
 @keyframes navbar-startup4 {
-    0% {left:-60px;opacity:0;}
-    100% {left:0px;opacity:1;}
+    0% {left:-7%;opacity:0;}
+    100% {left:0;opacity:1;}
 }
 
 @keyframes navbar-startup5 {
-    0% {left:-150px;opacity:0;}
-    100% {left:0px;opacity:1;}
+    0% {left:-20%;opacity:0;}
+    100% {left:0;opacity:1;}
 }
 
 @keyframes intro-box-shadow {
