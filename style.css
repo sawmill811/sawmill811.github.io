@@ -531,6 +531,7 @@ a {
         flex-direction: row;
         align-items: stretch;
         padding: 2em;
+        margin-top: 3.7em;
     }
 
     .content {
@@ -583,6 +584,14 @@ a {
         margin: 0.3em auto;
 
     }
+
+    .about-me {
+        margin-top:6em;
+    }
+
+    .skills-interests {
+        margin-top: 4em;
+    }
 }
 
 
@@ -599,7 +608,7 @@ a {
 @media (orientation: landscape) {
     .heading {
         text-align: left;
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .skills-content {
@@ -614,15 +623,15 @@ a {
     }
 
     .webdev .icon {
-        max-width: 54%;
+        max-width: 48%;
     }
 
     .programming .icon {
-        max-width: 50%;
+        max-width: 42%;
     }
 
     #js {
-        max-width: 47%;
+        max-width: 38%;
     }
 }
 
