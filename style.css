@@ -390,7 +390,7 @@ a {
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    border: 3px solid green;
+    /* border: 3px solid green; */
     padding: 0.5em;
     width: 90%;
     margin: 0 auto;
@@ -401,7 +401,7 @@ a {
 .section1 {
     position: relative;
     width: 100%;
-    border: 4px solid lightblue;
+    /* border: 4px solid lightblue; */
     color: rgb(255,245,237);
     font-family: "Oswald", sans-serif;
     font-weight: 300;
@@ -426,7 +426,7 @@ a {
     width: 100%;
     height: 30rem;
     
-    border: 4px solid lightblue;
+    /* border: 4px solid lightblue; */
     justify-content: center;
     align-items: center;
 }
