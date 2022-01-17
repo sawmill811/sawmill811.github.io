@@ -671,6 +671,9 @@ a {
 
     .contact-links {
         transform: scale(0.8);
+        height: 20%;
+        margin: min(0.3em, 0.5vw) auto;
+        margin-bottom: min(1em, 1.5vw);
     }
 
     .about-me, .skills-interests, .projects {
@@ -679,11 +682,6 @@ a {
         padding: min(2em, 3vw);
         border-width: min(0.3em, 0.45vw);
         border-radius: min(1em, 1.5vw);
-    }
-
-    .contact-links {
-        margin: min(0.3em, 0.5vw) auto;
-
     }
 
     .about-me {
@@ -714,7 +712,7 @@ a {
         /* border: 2px solid magenta; */
         width: 25%;
         height: 90%;
-        max-height: 50vh;
+        max-height: 400px;
         /* display: flex; */
         background: linear-gradient(to top, #000000, #191919);
         /* justify-content: space-around; */
@@ -745,7 +743,7 @@ a {
         top: 50%;
         margin-bottom: 0.5vw;
         text-align: center;
-        font-size: min(1em,1.8vw);
+        font-size: min(max(1em, 30px),1.8vw);
         /* border: 2px solid blue; */
         letter-spacing: 0.07em;
     }
@@ -756,7 +754,7 @@ a {
         height: 12%;
         left: 5%;
         top: 62%;
-        font-size: min(0.8em,1.5vw);
+        font-size: min(max(0.8em, 25px),1.5vw);
     
         /* border: 2px solid blue; */
     
