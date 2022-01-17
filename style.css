@@ -416,6 +416,8 @@ a {
     margin: auto;
     margin-bottom: 4em;
     width: 90%;
+    max-width: 40vh;
+    /* margin-top: 5em; */
     /* max-width: 30vw; */
     border-radius: 50%;
 }
@@ -625,6 +627,7 @@ a {
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     font-size: 5.5rem;
+    margin-bottom: 1em;
 }
 
 @media (orientation: landscape) {
