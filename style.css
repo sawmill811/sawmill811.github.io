@@ -16,6 +16,10 @@ body {
     box-sizing: border-box;
 }
 
+ion-icon {
+    pointer-events: none;
+}
+
 /* body::-webkit-scrollbar {
     width:0;
     height:0;
@@ -359,7 +363,7 @@ a {
 }
 
 .contact-links {
-    font-size:min(4em, 5.5vw);
+    /* font-size:min(4em, 5.5vw); */
     /* font-size: 2.5em; */
     display: flex;
     position: relative;
@@ -368,6 +372,7 @@ a {
     /* border: 4px solid blue; */
     /* padding: 20px; */
     color: #CD1818;
+    height: 12vh;
     transform: scale(1.4);
     /* text-align: center;     */
 }
@@ -512,6 +517,83 @@ a {
     -o-animation: opacityUP 2s ease 1;
     
 }
+
+.container {
+    position: relative;
+    width: 99%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid green; */
+    align-items: center;
+}
+
+.container #p1 {
+    position: absolute;
+    /* border: 2px solid magenta; */
+    width: 60%;
+    height: 90%;
+    max-height: 50vh;
+    /* display: flex; */
+    background: linear-gradient(to top, #000000, #191919);
+    /* justify-content: space-around; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    color: rgb(255,245,237);
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    padding: min(0.5em, 0.8vw);
+}
+
+.container #p1 #logo {
+    position: absolute;
+    height: 40%;
+    width: 50%;
+    left: 25%;
+    /* border: 2px solid blue; */
+    background: url("images/title_icon.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container #p1 #title {
+    position: absolute;
+    height: 15%;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    margin-bottom: 0.5vw;
+    text-align: center;
+    font-size: min(2.5em,5vh);
+    /* border: 2px solid blue; */
+    letter-spacing: 0.07em;
+}
+
+.container #p1 #short-desc {
+    position: absolute;
+    width: 90%;
+    height: 12%;
+    left: 5%;
+    top: 62%;
+    font-size: min(1.5em,3.8vh);
+
+    /* border: 2px solid blue; */
+
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.container #p1 #links {
+    position: absolute;
+    width: 90%;
+    height: 18%;
+    left: 5%;
+    top: 80%;
+    text-align: center;
+    /* border: 2px solid blue; */
+    font-size: min(1.5em,2.5vw);
+}
+
 /* 
 .contact-me {
     position: relative;
@@ -616,6 +698,84 @@ a {
         max-width: 30vw;
         margin-bottom: min(4em, 6vw);
     }
+
+    .container {
+        position: relative;
+        width: 99%;
+        height: 50vh;
+        display: flex;
+        justify-content: space-evenly;
+        /* border: 2px solid green; */
+        align-items: center;
+    }
+    
+    .container #p1 {
+        position: absolute;
+        /* border: 2px solid magenta; */
+        width: 25%;
+        height: 90%;
+        max-height: 50vh;
+        /* display: flex; */
+        background: linear-gradient(to top, #000000, #191919);
+        /* justify-content: space-around; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        color: rgb(255,245,237);
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        padding: min(0.5em, 0.8vw);
+    }
+    
+    .container #p1 #logo {
+        position: absolute;
+        height: 44%;
+        width: 44%;
+        left: 28%;
+        /* border: 2px solid blue; */
+        background: url("images/title_icon.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .container #p1 #title {
+        position: absolute;
+        height: 15%;
+        width: 90%;
+        left: 5%;
+        top: 50%;
+        margin-bottom: 0.5vw;
+        text-align: center;
+        font-size: min(1em,1.8vw);
+        /* border: 2px solid blue; */
+        letter-spacing: 0.07em;
+    }
+    
+    .container #p1 #short-desc {
+        position: absolute;
+        width: 90%;
+        height: 12%;
+        left: 5%;
+        top: 62%;
+        font-size: min(0.8em,1.5vw);
+    
+        /* border: 2px solid blue; */
+    
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+    
+    .container #p1 #links {
+        position: absolute;
+        width: 90%;
+        height: 18%;
+        left: 5%;
+        top: 80%;
+        text-align: center;
+        /* border: 2px solid blue; */
+        font-size: min(1.5em,2.5vw);
+    }
+
+
 }
 
 
