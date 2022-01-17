@@ -634,6 +634,8 @@ a {
     .heading {
         text-align: left;
         font-size: min(3rem, 5vw);
+        margin-bottom: 0;
+
         /* font-size: 3rem; */
     }
 
