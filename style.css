@@ -341,7 +341,7 @@ a {
 
 .pfp {
     margin: auto;
-    width: 70%;
+    width: 80%;
     max-width: 500px;
     position: relative;
     opacity: 0.7;
@@ -349,7 +349,7 @@ a {
 
 .pfp-actual {
     margin: 0 auto;
-    width: 64%;
+    width: 66%;
     /* max-width: 483px; */
     border-radius: 50%;
     position: absolute;
@@ -367,14 +367,32 @@ a {
     /* font-size: 2.5em; */
     display: flex;
     position: relative;
-    margin: 0.3em auto 0.5em auto;
-    justify-content: center;
+    margin: 1em auto 0.5em auto;
+    width: 80%;
+    justify-content: space-around;
     /* border: 4px solid blue; */
     /* padding: 20px; */
     color: #CD1818;
-    height: 12vh;
-    transform: scale(1.4);
+    height: fit-content;
+    /* transform: scale(1.4); */
     /* text-align: center;     */
+}
+
+
+#link1, #link2, #link3, #link4 {
+    height: 6vh;
+    max-height: 11vw;
+    margin: min(0.5em, 0.75vw);
+    transition: transform 0.5s ease;
+}
+
+#link1:hover, #link2:hover, #link3:hover, #link4:hover {
+    animation: my-rotate2 1s ease infinite;
+    /* transform: scale(0.8);  */
+}
+
+#link {
+    margin: 1vw;
 }
 
 .about-me {
@@ -504,13 +522,13 @@ a {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* bottom: 0; */
-    /* height: 66%; */
+    height: fit-content;
     margin: 5em auto 2em auto;
     padding: 1em;
     width: 80%;
     max-width:1200px;
-    border : 0.3em solid #A13333; border-radius: 1em;
+    border : 0.3em solid #A13333; 
+    border-radius: 1em;
     animation: opacityUP 2s ease 1;
     -webkit-animation: opacityUP 2s ease 1;
     -moz-animation: opacityUP 2s ease 1;
@@ -521,23 +539,23 @@ a {
 .container {
     position: relative;
     width: 99%;
-    height: 50vh;
+    height: fit-content;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
     /* border: 2px solid green; */
     align-items: center;
 }
 
-.container #p1 {
-    position: absolute;
+.container #project {
+    position: relative;
     /* border: 2px solid magenta; */
     width: 60%;
-    height: 90%;
-    max-height: 50vh;
-    /* display: flex; */
+    height: 40vh;
+    max-height: 60vw;
+    margin: 2em;
     background: linear-gradient(to top, #000000, #191919);
     /* justify-content: space-around; */
-    /* flex-direction: column; */
     /* align-items: center; */
     color: rgb(255,245,237);
     font-family: "Oswald", sans-serif;
@@ -545,18 +563,25 @@ a {
     padding: min(0.5em, 0.8vw);
 }
 
-.container #p1 #logo {
+.container #logo {
     position: absolute;
     height: 40%;
     width: 50%;
     left: 25%;
     /* border: 2px solid blue; */
-    background: url("images/title_icon.webp");
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.container #p1 #title {
+.pxsort {
+    background: url("images/pxsort.webp");
+}
+
+.auddle {
+    background: url("images/auddle.svg");
+}
+
+.container #title {
     position: absolute;
     height: 15%;
     width: 90%;
@@ -569,21 +594,18 @@ a {
     letter-spacing: 0.07em;
 }
 
-.container #p1 #short-desc {
+.container #short-desc {
     position: absolute;
     width: 90%;
     height: 12%;
     left: 5%;
     top: 62%;
-    font-size: min(1.5em,3.8vh);
-
-    /* border: 2px solid blue; */
-
+    font-size: min(1.9em,4.2vh);
     letter-spacing: 0.03em;
     text-align: center;
 }
 
-.container #p1 #links {
+.container #links {
     position: absolute;
     width: 90%;
     height: 18%;
@@ -669,11 +691,23 @@ a {
         margin: min(7em, 9vw) auto;
     }
 
+    .pfp {
+        width: 70%;
+    }
+
+    .pfp-actual {
+        width: 63%;
+    }
+
     .contact-links {
-        transform: scale(0.8);
-        height: 20%;
-        margin: min(0.3em, 0.5vw) auto;
-        margin-bottom: min(1em, 1.5vw);
+        /* transform: scale(0.8); */
+        height: fit-content;
+        /* margin: min(0.3em, 0.5vw) auto; */
+        /* margin-bottom: min(1em, 1.5vw); */
+    }
+
+    #link1, #link2, #link3, #link4 {
+        height: 4vw;
     }
 
     .about-me, .skills-interests, .projects {
@@ -701,14 +735,16 @@ a {
         position: relative;
         width: 99%;
         height: 50vh;
+        max-height: 30vw;
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         /* border: 2px solid green; */
         align-items: center;
     }
     
-    .container #p1 {
-        position: absolute;
+    .container #project {
+        position: relative;
         /* border: 2px solid magenta; */
         width: 25%;
         height: 90%;
@@ -724,18 +760,19 @@ a {
         padding: min(0.5em, 0.8vw);
     }
     
-    .container #p1 #logo {
+    .container #logo {
         position: absolute;
         height: 44%;
         width: 44%;
         left: 28%;
         /* border: 2px solid blue; */
-        background: url("images/title_icon.webp");
         background-repeat: no-repeat;
         background-size: contain;
     }
+
     
-    .container #p1 #title {
+    
+    .container #title {
         position: absolute;
         height: 15%;
         width: 90%;
@@ -748,7 +785,7 @@ a {
         letter-spacing: 0.07em;
     }
     
-    .container #p1 #short-desc {
+    .container #short-desc {
         position: absolute;
         width: 90%;
         height: 12%;
@@ -762,7 +799,7 @@ a {
         text-align: center;
     }
     
-    .container #p1 #links {
+    .container #links {
         position: absolute;
         width: 90%;
         height: 18%;
@@ -824,21 +861,6 @@ a {
 
 .content-text {
     font-size: min(0.8em, 4vw);
-}
-
-
-#link1, #link2, #link3, #link4 {
-    margin: min(0.5em, 0.75vw);
-    transition: transform 0.5s ease;
-}
-
-#link1:hover, #link2:hover, #link3:hover, #link4:hover {
-    animation: my-rotate2 1s ease infinite;
-    /* transform: scale(0.8);  */
-}
-
-#link {
-    margin: 1vw;
 }
 
 .footer {
