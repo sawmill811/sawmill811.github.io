@@ -600,7 +600,7 @@ a {
     height: 12%;
     left: 5%;
     top: 62%;
-    font-size: min(1.9em,4.2vh);
+    font-size: min(1.6em,3.8vh);
     letter-spacing: 0.03em;
     text-align: center;
 }
@@ -791,7 +791,7 @@ a {
         height: 12%;
         left: 5%;
         top: 62%;
-        font-size: min(max(0.8em, 25px),1.5vw);
+        font-size: min(0.85em,2.8vh);
     
         /* border: 2px solid blue; */
     
