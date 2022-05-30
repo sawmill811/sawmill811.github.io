@@ -702,12 +702,17 @@ a {
     .contact-links {
         /* transform: scale(0.8); */
         height: fit-content;
-        /* margin: min(0.3em, 0.5vw) auto; */
+        max-height: 15vh;
+        /* border: 2px solid blue; */
+        margin-top: min(0.5em, 5vh);
+        margin-bottom: min(0.5em, 5vh);
         /* margin-bottom: min(1em, 1.5vw); */
     }
 
     #link1, #link2, #link3, #link4 {
-        height: 4vw;
+        height: 3em;
+        max-height: 10vh;
+        margin: 0;
     }
 
     .about-me, .skills-interests, .projects {
@@ -734,7 +739,7 @@ a {
     .container {
         position: relative;
         width: 99%;
-        height: 50vh;
+        height: 25em;
         max-height: 30vw;
         display: flex;
         flex-direction: row;
